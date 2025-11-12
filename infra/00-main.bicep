@@ -17,3 +17,8 @@ module workflowsModule './10-workflows.bicep' = {
     location: location
   }
 }
+
+output subscriptionId string = subscription().id
+output subscriptionName string = subscription().displayName
+output workflowResources object = workflowsModule.outputs
+

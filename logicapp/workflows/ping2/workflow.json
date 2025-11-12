@@ -1,0 +1,24 @@
+{
+  "definition": {
+    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "triggers": {
+      "everyDay": {
+        "type": "Recurrence",
+        "recurrence": {
+          "frequency": "Day",
+          "interval": 1
+        }
+      }
+    },
+    "actions": {
+      "compose_message": {
+        "type": "Compose",
+        "inputs": "Körning startad från el portal 🚀"
+      }
+    },
+    "outputs": {}
+  },
+  "kind": "Stateful"
+}
